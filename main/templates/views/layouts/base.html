@@ -4,10 +4,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ title }} - Arru</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     </head>
     <body>
-        {% block content %}
+        <header>
+            {% include "views/layouts/nav.html" %}
+        </header>
+        <main>
+            {% block content %}
+            {% endblock content %}
+        </main>
+        <footer>
+            {% block footer %}
 
-        {% endblock content %}
+            {% endblock footer %}
+        </footer>
     </body>
 </html>
